@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM und Knoten</title>
+    <link rel="stylesheet" href="../../_lib/css/main.css">
+    <script src="05_listen.js"></script>
+</head>
+<body>
+    <h1>DOM-Methoden</h1>
+	<ul id="liste_oben">
+	    <li class="oben"> <a href="#">Bearbeiten</a> | <a href="#">Verschieben</a> Listeneintrag</li>
+	    <li class="oben"> <a href="#">Bearbeiten</a> | <a href="#">Verschieben</a> Listeneintrag</li>
+	    <li class="oben"> <a href="#">Bearbeiten</a> | <a href="#">Verschieben</a> Listeneintrag</li>
+	    <li class="oben"> <a href="#">Bearbeiten</a> | <a href="#">Verschieben</a> Listeneintrag</li>	   
+	</ul>
+
+<hr>
+
+<ul id="liste_unten">
+    <li class="unten"> <a href="#">Bearbeiten</a> | <a href="#">Verschieben</a> Listeneintrag</li>
+    <li class="unten"> <a href="#">Bearbeiten</a> | <a href="#">Verschieben</a> Listeneintrag</li>
+    <li class="unten"> <a href="#">Bearbeiten</a> | <a href="#">Verschieben</a> Listeneintrag</li>
+    <li class="unten"> <a href="#">Bearbeiten</a> | <a href="#">Verschieben</a> Listeneintrag</li>    
+</ul>
+
+<hr>
+<div id="neu">
+    <h2>Neuen Eintrag hinzufügen</h2>
+    <form action="#" method="get">
+        <label for="neuerEintrag">Neuer Listeneintrag</label>
+        <input id="neuerEintrag" name="neuerEintrag">
+        <input type="submit" id="oben_eintragen" name="oben_eintragen" value="Oben eintragen">
+        <input type="submit" id="unten_eintragen" name="unten_eintragen" value="Unten eintragen">
+    </form>
+</div>
+<hr>
+<div id="bearbeiten">
+    <h2>Eintrag bearbeiten</h2>
+    <form action="#" method="get">
+        <label for="eintrag">Listeneintrag</label>
+        <input id="eintrag" name="eintrag">
+        <input type="submit" id="aendern" name="aendern" value="Änderung speichern">
+    </form>
+</div>
+<hr>
+<div id="arbeitsanweisung">
+<pre>
+1. Click-Event - Listenpunkte verschieben
+Alle Hyperlinks "Verschieben" mit einem click-Handler versehen der es ermöglicht die Links von einer
+in die andere Liste zu verschieben. Dies soll in beide Richtungen funktionieren, 
+ein von ul#liste_oben nach ul#liste_unten verschobener link soll auch wieder 
+zurück geschoben werden können. Denken Sie daran das Attribute class nach dem 
+verschieben anzupassen.
+
+2. Click-Event - Listenpunkt bearbeiten
+div#bearbeiten soll nicht angezeigt werden. Verstecken Sie das Element beim 
+laden der Seite. Wird der Hyperlink "Bearbeiten" an einem  Listenpunkt angeklickt wird der 
+Textknoten des Listenpunktes zum bearbeiten ausgelsen.
+Schreiben Sie den ausgelesenen Textknoten des Listenpunkts in das Inputfeld#eintrag.
+Der Nutzer hat jetzt die Möglichkeit den Listeneintrag zu bearbeiten/ändern.
+Wird auf "Änderung speichern" gedrückt, wird der Listenpunkt auf den neuen Wert
+gesetzt und das Feld div#bearbeiten soll wieder versteckt werden.
+
+3. Neue Listenpunkte in obere oder untere Liste hinzufügen
+Ein neuer Listenpunkt in der gewünschten Liste wird mit Klassenattribut wird erzeugt.
+Button "Oben eintragen" - Inputfeldauslesen und den Inhalt als Listenpunkt mit 
+der Klasse oben in ul#liste_oben einfügen
+
+Button "Unten eintragen" - Inputfeldauslesen und den Inhalt als Listenpunkt 
+mit der Klasse oben in ul#liste_unten einfügen
+
+Jeder neue Listenpunkt soll ebenfalls mit einem Eventhandler versehen werden, 
+der das bearbeiten ermöglicht.
+
+</pre>	
+
+</div> 
+</body>
+    <noscript>
+      <p>When you have eliminated the <b>JavaScript</b>, whatever remains must be an empty page.</p>  
+    </noscript>
+</body>
+</html>
